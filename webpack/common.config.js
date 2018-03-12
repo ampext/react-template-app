@@ -1,12 +1,13 @@
-module.exports = {
+const path = require('path');
+
+const config = {
   entry: {
     'app': './src/app'
   },
 
   output: {
-    path: 'build',
+    path: path.resolve(__dirname, '../build'),
     filename: '[name].js',
-    library: '[name]'
   },
 
   resolve: {
@@ -17,11 +18,13 @@ module.exports = {
   devtool: 'source-map',
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        use: 'ts-loader'
       }
     ]
   }
 };
+
+module.exports = config;
