@@ -21,10 +21,13 @@
     "ts-jest": "24.0.0",
     "webpack": "4.29.6",
     "webpack-cli": "3.2.3",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.1",
+    "webpack-dev-server": "3.2.1",
+    "html-webpack-plugin": "3.2.0"
   },
   "scripts": {
     "build": "webpack --config=./webpack/prod.config.js",
+    "start": "webpack-dev-server --config=./webpack/dev.config.js",
     "test": "jest"
   },
   "jest": {

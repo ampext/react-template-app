@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Foo from './foo';
 
 class App extends React.PureComponent<{}, {}> {

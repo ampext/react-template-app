@@ -1,9 +1,10 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const config = {
   entry: {
-    'app': './src/app'
+    'app': './src/index'
   },
 
   output: {
@@ -15,6 +16,13 @@ const config = {
     modules: ['src', 'tests', 'node_modules'],
     extensions: ['.ts', '.tsx', '.js']
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'App',
+      template:  path.join(ROOT_DIR, 'public/index.html'),
+    })
+  ],
 
   devtool: 'source-map',
 
