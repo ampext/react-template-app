@@ -1,4 +1,5 @@
 const path = require('path');
+const ROOT_DIR = path.resolve(__dirname, '..');
 
 const config = {
   entry: {
@@ -6,7 +7,7 @@ const config = {
   },
 
   output: {
-    path: path.resolve(__dirname, '../build'),
+    path: path.join(ROOT_DIR, 'build'),
     filename: '[name].js',
   },
 
@@ -21,7 +22,10 @@ const config = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader'
+        use: 'ts-loader',
+        include: [
+          path.join(ROOT_DIR, 'src'),
+        ]
       }
     ]
   }

@@ -1,15 +1,26 @@
-import React from 'react';
+import React from "react";
 import { shallow } from 'enzyme';
+
 import Foo from 'foo';
 
-describe('foo', () => {
+describe('Foo', () => {
+  const props = {
+    title: 'foo',
+    message: 'bar',
+  };
+
   it('render', () => {
-    const clickSpy = jasmine.createSpy('onClick');
-    const foo = shallow(<Foo title='foo' message='bar' onClick={clickSpy} />);
+    const wrapper = shallow(<Foo {...props} />);
 
-    foo.simulate('click');
-    expect(clickSpy).toHaveBeenCalled();
+    expect(wrapper.find('h1').text()).toBe(props.title);
+    expect(wrapper.find('span').text()).toBe(props.message);
+  });
 
-    expect(foo.find('h1').length).toBe(1);
+  it('on click', () => {
+    const onClick = jest.fn();
+    const wrapper = shallow(<Foo {...props} onClick={onClick} />);
+
+    wrapper.simulate('click');
+    expect(onClick).toHaveBeenCalled();
   });
 });

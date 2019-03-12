@@ -3,7 +3,7 @@ import React from 'react';
 interface FooProps {
   title: string;
   message: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export class Foo extends React.PureComponent<FooProps, {}> {

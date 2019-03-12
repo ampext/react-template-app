@@ -8,6 +8,7 @@
     "baseUrl": "./src",
     "moduleResolution": "classic",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false
