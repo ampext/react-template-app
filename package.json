@@ -1,33 +1,33 @@
 {
   "name": "test-react-app",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
-    "react": "16.8.4",
-    "react-dom": "16.8.4"
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
-    "@types/enzyme": "3.9.0",
+    "@types/enzyme": "3.10.3",
     "@types/enzyme-adapter-react-16": "1.0.5",
-    "@types/jsdom": "12.2.3",
-    "@types/react": "16.8.7",
-    "@types/react-dom": "16.8.2",
-    "@types/jest": "24.0.11",
-    "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.10.0",
+    "@types/jsdom": "12.2.4",
+    "@types/react": "16.8.24",
+    "@types/react-dom": "16.8.5",
+    "@types/jest": "24.0.17",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
     "ts-loader": "5.3.3",
     "typescript": "3.2.4",
-    "jest": "24.4.0",
-    "ts-jest": "24.0.0",
-    "webpack": "4.29.6",
-    "webpack-cli": "3.2.3",
+    "jest": "24.8.0",
+    "ts-jest": "24.0.2",
+    "webpack": "4.39.1",
+    "webpack-cli": "3.3.6",
     "webpack-merge": "4.2.1",
-    "webpack-dev-server": "3.2.1",
+    "webpack-dev-server": "3.7.2",
     "html-webpack-plugin": "3.2.0"
   },
   "scripts": {
-    "build": "webpack --config=./webpack/prod.config.js",
-    "start": "webpack-dev-server --config=./webpack/dev.config.js",
+    "build": "webpack --mode=production --config=webpack.config.js",
+    "start": "webpack-dev-server --config=webpack.config.js",
     "test": "jest"
   },
   "jest": {
