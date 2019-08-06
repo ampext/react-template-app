@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from 'enzyme';
 
-import Foo from 'foo';
+import Foo from 'components/Foo';
 
 describe('Foo', () => {
   const props = {
