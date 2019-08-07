@@ -6,7 +6,7 @@
     "removeComments": false,
     "jsx": "react",
     "baseUrl": "./src",
-    "moduleResolution": "classic",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
